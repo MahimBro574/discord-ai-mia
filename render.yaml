@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: discord-ai-mia
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python mia.py"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
